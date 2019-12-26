@@ -212,7 +212,7 @@ resource "null_resource" "pre-install-master" {
     inline  = [
       "mkdir -p /root/installer",
       "mkdir -p /root/logs",
-      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh",
+      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh?token=AFAYWK77HQRF7QZJFCCEOX26ARQWC",
       ". /root/installer/downloads.sh master ${local.parameters}",
       ". /root/installer/pre-install.sh master ${local.parameters}",
     ]
@@ -248,7 +248,7 @@ resource "null_resource" "pre-install-compute" {
     inline  = [
       "mkdir -p /root/installer",
       "mkdir -p /root/logs",
-      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh",
+      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh?token=AFAYWK77HQRF7QZJFCCEOX26ARQWC",
       ". /root/installer/downloads.sh compute ${local.parameters}",
       ". /root/installer/pre-install.sh compute ${local.parameters}",
     ]
