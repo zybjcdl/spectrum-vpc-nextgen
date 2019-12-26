@@ -4,6 +4,7 @@ locals {
     product_name = "${var.spectrum_product == "symphony" ? "symphony" : "lsf"}"
     deployer_ssh_key_file_name = "deployer-ssh-key"
     master_ssh_key_file_name = "spectrum-master-ssh-key"
+    compute_ssh_key_file_name = "spectrum-compute-ssh-key"
     scripts_path_uri = "https://raw.githubusercontent.com/zybjcdl/spectrum-vpc-nextgen/master/scripts"
     param_list = [
                 "${var.entitlement_uri}",
