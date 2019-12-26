@@ -5,7 +5,7 @@ locals {
     deployer_ssh_key_file_name = "deployer-ssh-key"
     master_ssh_key_file_name = "spectrum-master-ssh-key"
     compute_ssh_key_file_name = "spectrum-compute-ssh-key"
-    scripts_path_uri = "https://raw.githubusercontent.com/zybjcdl/spectrum-vpc-nextgen/master/scripts"
+    scripts_path_uri = "http://52.117.200.197/gen2_scripts"
     param_list = [
                 "${var.entitlement_uri}",
                 "${base64encode(var.cluster_admin_password)}",
@@ -212,7 +212,7 @@ resource "null_resource" "pre-install-master" {
     inline  = [
       "mkdir -p /root/installer",
       "mkdir -p /root/logs",
-      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh?token=AFAYWK77HQRF7QZJFCCEOX26ARQWC",
+      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh",
       ". /root/installer/downloads.sh master ${local.parameters}",
       ". /root/installer/pre-install.sh master ${local.parameters}",
     ]
@@ -248,7 +248,7 @@ resource "null_resource" "pre-install-compute" {
     inline  = [
       "mkdir -p /root/installer",
       "mkdir -p /root/logs",
-      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh?token=AFAYWK77HQRF7QZJFCCEOX26ARQWC",
+      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh",
       ". /root/installer/downloads.sh compute ${local.parameters}",
       ". /root/installer/pre-install.sh compute ${local.parameters}",
     ]

@@ -9,7 +9,7 @@ function LOG()
 
 LOG "Start download script for $ROLE ..."
 
-SCRIPTS_URI="https://raw.githubusercontent.com/zybjcdl/spectrum-vpc-nextgen/master/scripts/symphony"
+SCRIPTS_URI="http://52.117.200.197/gen2_scripts/symphony"
 INSTALLER_URI="http://52.117.200.197/suites/symphony/symeval-7.3.0.0_x86_64.bin"
 ENTITLEMENT_URI=$2
 
@@ -17,16 +17,16 @@ LOG "wget -nv -nH -c --no-check-certificate -O symeval-7.3.0.0_x86_64.bin $INSTA
 wget -nv -nH -c --no-check-certificate -O /root/installer/sym_x86_64.bin $INSTALLER_URI
 
 LOG "wget -nv -nH -c --no-check-certificate -O /root/installer/pre-install.sh $SCRIPTS_URI/pre-install.sh"
-wget -nv -nH -c --no-check-certificate -O /root/installer/pre-install.sh $SCRIPTS_URI/pre-install.sh?token=AFAYWK77HQRF7QZJFCCEOX26ARQWC
+wget -nv -nH -c --no-check-certificate -O /root/installer/pre-install.sh $SCRIPTS_URI/pre-install.sh
 
 LOG "wget -nv -nH -c --no-check-certificate -O /root/installer/install.sh $SCRIPTS_URI/install.sh"
-wget -nv -nH -c --no-check-certificate -O /root/installer/install.sh $SCRIPTS_URI/install.sh?token=AFAYWK77HQRF7QZJFCCEOX26ARQWC
+wget -nv -nH -c --no-check-certificate -O /root/installer/install.sh $SCRIPTS_URI/install.sh
 
 LOG "wget -nv -nH -c --no-check-certificate -O /root/installer/clean.sh $SCRIPTS_URI/clean.sh"
-wget -nv -nH -c --no-check-certificate -O /root/installer/clean.sh $SCRIPTS_URI/clean.sh?token=AFAYWK77HQRF7QZJFCCEOX26ARQWC
+wget -nv -nH -c --no-check-certificate -O /root/installer/clean.sh $SCRIPTS_URI/clean.sh
 
 LOG "wget -nv -nH -c --no-check-certificate -O /root/installer/post-install.sh $SCRIPTS_URI/post-install.sh"
-wget -nv -nH -c --no-check-certificate -O /root/installer/post-install.sh $SCRIPTS_URI/post-install.sh?token=AFAYWK77HQRF7QZJFCCEOX26ARQWC
+wget -nv -nH -c --no-check-certificate -O /root/installer/post-install.sh $SCRIPTS_URI/post-install.sh
 
 if [ "$ROLE" == "master" ]
 then
