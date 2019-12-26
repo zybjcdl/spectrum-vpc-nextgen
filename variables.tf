@@ -43,17 +43,6 @@ variable "cluster_name" {
   default = "spectrum-cluster"
 }
 
-variable "scripts_path_uri" {
-  type = "string"
-  description = "URI of scripts folder"
-  default = "https://raw.githubusercontent.com/chenxpcn/spectrum-ibmcloud-basic/master/scripts"
-}
-
-variable "installer_uri" {
-  type = "string"
-  description = "URI of Symphony / LSF installer package"
-}
-
 variable "entitlement_uri" {
   type = "string"
   description = "URI of Symphony entitlement file"

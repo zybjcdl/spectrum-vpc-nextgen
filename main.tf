@@ -4,10 +4,7 @@ locals {
     product_name = "${var.spectrum_product == "symphony" ? "symphony" : "lsf"}"
     deployer_ssh_key_file_name = "deployer-ssh-key"
     master_ssh_key_file_name = "spectrum-master-ssh-key"
-    compute_ssh_key_file_name = "spectrum-compute-ssh-key"
     param_list = [
-                "${var.scripts_path_uri}",
-                "${var.installer_uri}",
                 "${var.entitlement_uri}",
                 "${base64encode(var.cluster_admin_password)}",
                 "${base64encode(var.ssh_key)}",

@@ -20,13 +20,6 @@ zone = "us-south"
 # (optional) Spectrum product need to be installed, either symphony or lsf
 spectrum_product = "symphony"
 
-# (optional) uri of scripts folder
-# scripts_path_uri = "https://raw.githubusercontent.com/chenxpcn/spectrum-lsf-ibmcloud/master/scripts"
-scripts_path_uri = "http://52.117.200.197/gen2_scripts_count"
-
-# (optional) uri of installer package
-installer_uri = ""
-
 # (required) uri of entitlement file
 entitlement_uri = ""
 

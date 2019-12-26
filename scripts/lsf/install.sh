@@ -1,11 +1,11 @@
 #!/bin/bash
 
 export ROLE=$1
-export ADMIN_PASSWORD=`echo $5 | base64 -d`
-export CLUSTERNAME=${7}
-export NUM_COMPUTES=${10}
-export COMPUTE_HOSTNAME=${11}
-export COMPUTE_PRIVATE_IP=${12}
+export ADMIN_PASSWORD=`echo $3 | base64 -d`
+export CLUSTERNAME=$5
+export NUM_COMPUTES=$8
+export COMPUTE_HOSTNAME=$9
+export COMPUTE_PRIVATE_IP=${10}
 
 
 array_compute_host=(${COMPUTE_HOSTNAME//,/ })
