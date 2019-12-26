@@ -5,35 +5,38 @@
 
 variable "ibmcloud_api_key" {
   type = "string"
-  description = "ibmcloud api key"
+  description = "IBM Cloud API Key"
 }
 
 ############################################################
 
 variable ssh_key {
-  default = "test-key"
+  type = "string"
   description = "Public SSH key of remote console for control"
 }
 
 variable zone {
+  type = "string"
   default = "us-south"
-  description = "Region info."
+  description = "VPC Zone"
 }
 
 variable master_host {
-  default = "symphony-master"
-  description = "Name of master host"
+  type = "string"
+  default = "master"
+  description = "Host name prefix for master node"
 }
 
 variable compute_host {
-  default = "symphony-compute"
-  description = "Name of compute host"
+  type = "string"
+  default = "compute"
+  description = "Host name prefix for compute nodes"
 }
 
 # for main.tf
 variable "spectrum_product" {
   type = "string"
-  description = "symphony or lsf"
+  description = "Spectrum product need to be installed, either symphony or lsf"
   default = "symphony"
 }
 
@@ -46,7 +49,6 @@ variable "cluster_name" {
 variable "entitlement_uri" {
   type = "string"
   description = "URI of Symphony entitlement file"
-  default="n/a"
 }
 
 variable "cluster_admin_password" {
@@ -56,4 +58,5 @@ variable "cluster_admin_password" {
 
 variable "num_computes" {
   default = "2"
+  description = "number of compute nodes"
 }

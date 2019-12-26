@@ -8,7 +8,7 @@ ibmcloud_api_key = ""
 master_host = "master"
 compute_host = "compute"
 
-# (optional) number of compute
+# (optional) number of compute nodes
 num_computes = "1"
 
 # (required) public ssh key for remote console that used to control the master/compute host
