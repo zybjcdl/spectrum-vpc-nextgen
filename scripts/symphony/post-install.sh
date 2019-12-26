@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export ROLE=$1
-export MASTER_HOSTNAME=$6
+export MASTER_HOSTNAME=$7
 
 export MASTER_HOSTNAME_SHORT=`echo $MASTER_HOSTNAME | cut -d '.' -f 1`
 

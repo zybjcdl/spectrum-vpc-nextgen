@@ -9,9 +9,9 @@ function LOG()
 
 LOG "Start download script for $ROLE ..."
 
-SCRIPTS_URI="http://52.117.200.197/gen2_scripts/symphony"
+SCRIPTS_URI=$2/symphony
 INSTALLER_URI="http://52.117.200.197/suites/symphony/symeval-7.3.0.0_x86_64.bin"
-ENTITLEMENT_URI=$2
+ENTITLEMENT_URI=$3
 
 LOG "wget -nv -nH -c --no-check-certificate -O symeval-7.3.0.0_x86_64.bin $INSTALLER_URI"
 wget -nv -nH -c --no-check-certificate -O /root/installer/sym_x86_64.bin $INSTALLER_URI

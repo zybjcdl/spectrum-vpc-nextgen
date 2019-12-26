@@ -7,6 +7,7 @@ locals {
     compute_ssh_key_file_name = "spectrum-compute-ssh-key"
     scripts_path_uri = "http://52.117.200.197/gen2_scripts"
     param_list = [
+                "${local.scripts_path_uri}",
                 "${var.entitlement_uri}",
                 "${base64encode(var.cluster_admin_password)}",
                 "${base64encode(var.ssh_key)}",

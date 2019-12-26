@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export ROLE=$1
-export CLUSTERNAME=$5
+export CLUSTERNAME=$6
 
 export CLUSTERADMIN=egoadmin
 export SIMPLIFIEDWEM=N

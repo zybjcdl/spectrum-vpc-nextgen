@@ -1,12 +1,12 @@
 #!/bin/bash
 
 export ROLE=$1
-export REMOTE_CONSOLE_SSH_KEY=`echo $6 | base64 -d`
-export MASTER_HOSTNAME=$6
-export MASTER_PRIVATE_IP=$7
-export NUM_COMPUTES=$8
-export COMPUTE_HOSTNAME=$9
-export COMPUTE_PRIVATE_IP=${10}
+export REMOTE_CONSOLE_SSH_KEY=`echo $5 | base64 -d`
+export MASTER_HOSTNAME=$7
+export MASTER_PRIVATE_IP=$8
+export NUM_COMPUTES=$9
+export COMPUTE_HOSTNAME=${10}
+export COMPUTE_PRIVATE_IP=${11}
 
 export MASTER_HOSTNAME_SHORT=`echo $MASTER_HOSTNAME | cut -d '.' -f 1`
 

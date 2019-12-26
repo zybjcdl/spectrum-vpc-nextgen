@@ -10,7 +10,7 @@ function LOG()
 LOG "Start download script for $ROLE ..."
 
 
-SCRIPTS_URI="http://52.117.200.197/gen2_scripts/scripts/lsf"
+SCRIPTS_URI=$2/lsf
 INSTALLER_URI="http://52.117.200.197/suites/lsf/lsfsent10.2.0.8-x86_64.bin"
 
 LOG "wget -nv -nH -c --no-check-certificate -O /root/installer/pre-install.sh $SCRIPTS_URI/pre-install.sh"

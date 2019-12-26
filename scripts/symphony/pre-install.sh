@@ -1,10 +1,10 @@
 #!/bin/bash
 
 export ROLE=$1
-export ADMIN_PASSWORD=`echo $3 | base64 -d`
-export REMOTE_CONSOLE_SSH_KEY=`echo $4 | base64 -d`
-export MASTER_HOSTNAME=$6
-export MASTER_PRIVATE_IP=$7
+export ADMIN_PASSWORD=`echo $4 | base64 -d`
+export REMOTE_CONSOLE_SSH_KEY=`echo $5 | base64 -d`
+export MASTER_HOSTNAME=$7
+export MASTER_PRIVATE_IP=$8
 
 export MASTER_HOSTNAME_SHORT=`echo $MASTER_HOSTNAME | cut -d '.' -f 1`
 
