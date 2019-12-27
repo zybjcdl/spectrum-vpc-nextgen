@@ -53,10 +53,10 @@ To run this project locally:
 |-------------|-----------|-------------|
 |ibmcloud_api_key|IBM Cloud API Key||
 |master_host|Host name prefix for master node|master|
-|Host name prefix for compute nodes|Host name prefix for compute nodes|compute|
+|compute_host|Host name prefix for compute nodes|compute|
 |spectrum_product|IBM Spectrum product that to be installed, either symphony or lsf|symphony|
 |cluster_name|the name of cluster|spectrum-cluster|
-|zone|the vpc region info|
+|zone|the vpc region info|us-south|
 |ssh_key|The public key contents for the SSH keypair of remote console for access cluster node||
 |entitlement_uri| the URI of IBM Spectrum Symphony entitlement file (this is meaningless for LSF)||
 |cluster_admin_password|the password for administrator user **lsfadmin** for LSF, **egoadmin** for Symphony||
