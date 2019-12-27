@@ -1,6 +1,6 @@
 # IBM Spectrum LSF / Symphony Cluster on IBM Virtual Private Cloud Generation 2 Template
 
-An [IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-about-schematics) template to deploy and launch an HPC (High Performance Computing) cluster Tech Preview, IBM Spectrum LSF Suite (with Resource Connector) and IBM Spectrum Symphony (with HostFactory) is used in the Tech Preview.
+An [IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-about-schematics) template to deploy and launch an HPC (High Performance Computing) cluster Tech Preview, IBM Spectrum LSF Suite and IBM Spectrum Symphony is used in the Tech Preview.
 Schematics uses [Terraform](https://www.terraform.io/) as the infrastructure as code engine. With this template, you can provision and manage infrastructure as a single unit.
 See the [Terraform provider docs](https://ibm-cloud.github.io/tf-ibm-docs/) for available resources for the IBM Cloud. **Note**: To create the resources that this template requests, your [IBM Cloud Infrastructure (Softlayer) account](https://cloud.ibm.com/docs/iam?topic=iam-mngclassicinfra#managing-infrastructure-access) and [IBM Cloud account](https://cloud.ibm.com/docs/iam?topic=iam-iammanidaccser#iammanidaccser) must have sufficient permissions.
 
@@ -58,7 +58,7 @@ To run this project locally:
 |cluster_name|the name of cluster|spectrum-cluster|
 |zone|the vpc region info|
 |ssh_key|The public key contents for the SSH keypair of remote console for access cluster node||
-|entitlement_uri| the URI of IBM Spectrum Symphony entitlement file (this is meaningless for LSF)|n/a|
+|entitlement_uri| the URI of IBM Spectrum Symphony entitlement file (this is meaningless for LSF)||
 |cluster_admin_password|the password for administrator user **lsfadmin** for LSF, **egoadmin** for Symphony||
 |num_computes|number of compute nodes|2|
 
