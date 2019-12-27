@@ -6,9 +6,9 @@ See the [Terraform provider docs](https://ibm-cloud.github.io/tf-ibm-docs/) for 
 
 **IMPORTANT**
 
-Due to legal requirement, we cannot provide product packages and entitlement in this template. 
-For LSF, we use IBM Spectrum LSF Suite for Enterprise 10.2.0.8 (for Linux on x86-64 English), you should provide your own installation package, and specify the URL of the installation package in the variable `installer_uri` in the Variables section of your environment created using this template.  You maybe get IBM Spectrum LSF Suite for Enterprise 10.2.0.8 from [IBM Passport Advantage](https://www.ibm.com/software/passportadvantage/index.html).
-For Symphony, we use IBM Spectrum Symphony 7.3.0.0 Evaluation Edition for Linux (64-bit), you should provide the URL of installation package in the variable `installer_uri` and the URL of entitlement file in variable `entitlement_uri`.
+Due to legal requirement, we cannot provide entitlement in this template, you should provide the URL of entitlement file in variable `entitlement_uri`.
+For LSF, we use IBM Spectrum LSF Suite for Enterprise 10.2.0.8 (for Linux on x86-64 English).
+For Symphony, we use IBM Spectrum Symphony 7.3.0.0 Evaluation Edition for Linux (64-bit).
 
 ## Brief Introduction
 This template will deploy a HPC cluster with IBM Spectrum LSF or IBM Spectrum Symphony on IBM Virtual Private Cloud Generation 2.
