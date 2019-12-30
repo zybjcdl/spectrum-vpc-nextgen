@@ -9,7 +9,6 @@ function LOG()
 }
 
 LOG "Post configure for cluster ..."
-source /opt/ibm/spectrumcomputing/profile.platform
 if [ "$ROLE" == "master" ]
 then
     source /opt/ibm/lsfsuite/lsf/conf/profile.lsf
