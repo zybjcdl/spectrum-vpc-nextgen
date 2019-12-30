@@ -29,7 +29,8 @@ if [ "$ROLE" == "master" ]
 then
     LOG "wget -nv -nH -c --no-check-certificate -O lsfsent-x86_64.bin $INSTALLER_URI"
     wget -nv -nH -c --no-check-certificate -O /root/installer/lsfsent-x86_64.bin $INSTALLER_URI
-
+    LOG "wget -nv -nH -c --no-check-certificate -O /tmp/lsf.entitlement $ENTITLEMENT_URI"
+    wget -nv -nH -c --no-check-certificate -O /tmp/lsf.entitlement $ENTITLEMENT_URI
     chmod u+x /root/installer/*.sh
 fi
 
