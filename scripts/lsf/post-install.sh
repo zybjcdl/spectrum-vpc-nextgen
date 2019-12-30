@@ -13,10 +13,11 @@ source /opt/ibm/spectrumcomputing/profile.platform
 if [ "$ROLE" == "master" ]
 then
     source /opt/ibm/lsfsuite/lsf/conf/profile.lsf
-    lsadmin limshutdown
+    lsf_daemons stop
+    sleep 20
     rm -f /opt/ibm/lsfsuite/lsf/conf/lsf.entitlement
     cp /tmp/lsf.entitlement /opt/ibm/lsfsuite/lsf/conf/lsf.entitlement
-    lsadmin limstartup
+    lsf_daemons start
 fi
 
 LOG "Complete post-install.sh for $ROLE."
