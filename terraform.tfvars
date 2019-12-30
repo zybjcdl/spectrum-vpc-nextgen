@@ -9,7 +9,7 @@ master_host = "master"
 compute_host = "compute"
 
 # (optional) number of compute nodes
-num_computes = "1"
+num_computes = "2"
 
 # (required) public ssh key for remote console that used to control the master/compute host
 ssh_key = ""
