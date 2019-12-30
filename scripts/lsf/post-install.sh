@@ -16,7 +16,7 @@ then
     lsadmin limshutdown
     rm -f /opt/ibm/lsfsuite/lsf/conf/lsf.entitlement
     cp /tmp/lsf.entitlement /opt/ibm/lsfsuite/lsf/conf/lsf.entitlement
-    lsadmin limrestart
+    lsadmin limstartup
 fi
 
 LOG "Complete post-install.sh for $ROLE."
