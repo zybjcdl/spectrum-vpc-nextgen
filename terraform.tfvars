@@ -25,3 +25,9 @@ entitlement_uri = ""
 
 # (required) password for cluster administrator
 cluster_admin_password = ""
+
+# (required) userid for installation package download
+download_userid = ""
+
+# (required) password for installation package download
+download_password = ""

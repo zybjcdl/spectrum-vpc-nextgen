@@ -60,3 +60,13 @@ variable "num_computes" {
   default = "2"
   description = "number of compute nodes"
 }
+
+variable "download_userid" {
+  type = "string"
+  description = "UserId for installation package download"
+}
+
+variable "download_password" {
+  type = "string"
+  description = "Password for installation package download"
+}

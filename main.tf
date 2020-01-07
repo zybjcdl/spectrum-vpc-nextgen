@@ -17,6 +17,8 @@ locals {
                 "${var.num_computes}",
                 "${join(",", ibm_is_instance.compute.*.name)}",
                 "${join(",", ibm_is_instance.compute.*.primary_network_interface.0.primary_ipv4_address)}",
+                "${var.download_userid}",
+                "${var.download_password}",
                 ]
     parameters = "${join(" ", local.param_list)}"
    }
@@ -213,7 +215,7 @@ resource "null_resource" "pre-install-master" {
     inline  = [
       "mkdir -p /root/installer",
       "mkdir -p /root/logs",
-      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh",
+      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh --http-user=${var.download_userid} --http-password=${var.download_password}",
       ". /root/installer/downloads.sh master ${local.parameters}",
       ". /root/installer/pre-install.sh master ${local.parameters}",
     ]
@@ -249,7 +251,7 @@ resource "null_resource" "pre-install-compute" {
     inline  = [
       "mkdir -p /root/installer",
       "mkdir -p /root/logs",
-      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh",
+      "wget -nv -nH -c --no-check-certificate -O /root/installer/downloads.sh ${local.scripts_path_uri}/${local.product_name}/downloads.sh --http-user=${var.download_userid} --http-password=${var.download_password}",
       ". /root/installer/downloads.sh compute ${local.parameters}",
       ". /root/installer/pre-install.sh compute ${local.parameters}",
     ]
