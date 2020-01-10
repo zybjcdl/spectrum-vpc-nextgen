@@ -60,5 +60,6 @@ To run this project locally:
 |ssh_key|The public key contents for the SSH keypair of remote console for access cluster node||
 |entitlement_uri| the URI of IBM Spectrum Symphony entitlement file (this is meaningless for LSF)||
 |cluster_admin_password|the password for administrator user **lsfadmin** for LSF, **egoadmin** for Symphony||
-|num_computes|number of compute nodes|2|
+|download_userid|UserId for installation package download||
+|download_password|Password for installation package download||
 
