@@ -135,7 +135,7 @@ resource ibm_is_subnet "subnet" {
 
 
 resource ibm_is_ssh_key "ssh_key_id" {
-  name       = "yan-ssh-key"
+  name       = "${local.BASENAME}-ssh-key"
   public_key = "${var.ssh_key}"
 }
 
