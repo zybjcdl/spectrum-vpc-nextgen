@@ -23,6 +23,9 @@ spectrum_product = "symphony"
 # (required) uri of entitlement file
 entitlement_uri = ""
 
+# (optional) uri of scripts folder
+scripts_path_uri = "https://raw.githubusercontent.com/zybjcdl/spectrum-vpc-nextgen/rel-0.2/scripts"
+
 # (required) password for cluster administrator
 cluster_admin_password = ""
 
