@@ -51,6 +51,12 @@ variable "entitlement_uri" {
   description = "URI of Symphony entitlement file"
 }
 
+variable "scripts_path_uri" {
+  type = "string"
+  description = "URI of scripts folder"
+  default = "https://raw.githubusercontent.com/zybjcdl/spectrum-vpc-nextgen/rel-0.2/scripts"
+}
+
 variable "cluster_admin_password" {
   type = "string"
   description = "Password for cluster administrator"
