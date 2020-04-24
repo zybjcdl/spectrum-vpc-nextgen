@@ -41,7 +41,7 @@ data "local_file" "deployer_ssh_private_key" {
 }
 
 resource "ibm_is_ssh_key" "deployer_ssh_key" {
-  name       = "deployer-ssh-key"
+  name       = "${local.BASENAME}-deployer-ssh-key"
   public_key = "${data.local_file.deployer_ssh_public_key.content}"
   depends_on = ["null_resource.create_deployer_ssh_key"]
 }

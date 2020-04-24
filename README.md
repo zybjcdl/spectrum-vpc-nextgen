@@ -59,6 +59,7 @@ To run this project locally:
 |zone|the vpc region info|us-south|
 |ssh_key|The public key contents for the SSH keypair of remote console for access cluster node||
 |entitlement_uri| the URI of IBM Spectrum Symphony entitlement file (this is meaningless for LSF)||
+|scripts_path_uri| the URI of scripts folder|https://raw.githubusercontent.com/zybjcdl/spectrum-vpc-nextgen/rel-0.2/scripts|
 |cluster_admin_password|the password for administrator user **lsfadmin** for LSF, **egoadmin** for Symphony||
 |download_userid|UserId for installation package download||
 |download_password|Password for installation package download||
